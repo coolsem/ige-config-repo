@@ -3,7 +3,7 @@ bus: true
 
 eureka:
   instance:
-    leaseRenewalIntervalInSeconds: 60
+    leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${server.port:8084}}
   client:
@@ -13,6 +13,9 @@ eureka:
 ---
 spring:
   profiles: cloud
+  data:
+    mongodb:
+      uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri:mongodb://${MONGODB_HOST:localhost}:${MONGODB_PORT:27017}/productsApi}
 eureka:
   instance:
     hostname: ${vcap.application.uris[0]}
