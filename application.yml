@@ -15,4 +15,4 @@ eureka:
     nonSecurePort: 80
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.${PREFIX:}ige-eureka-server.credentials.uri:http://${PREFIX:}ige-eureka-server.${application.domain:cfapps.io}}/eureka/  
+      defaultZone: ${vcap.services.${PREFIX:}ige-eureka-server.credentials.uri:http://${PREFIX:}ige-eureka-server.${application.domain:cfapps.io}}/ige-eureka-server/  
