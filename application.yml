@@ -14,5 +14,7 @@ eureka:
     hostname: ${vcap.application.uris[0]}
     nonSecurePort: 80
   client:
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
       defaultZone: ${vcap.services.${PREFIX:}ige-eureka-server.credentials.uri:http://${PREFIX:}ige-eureka-server.${application.domain:cfapps.io}}/ige-eureka-server/  
