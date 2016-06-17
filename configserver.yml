@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: development
+
+---
+
+spring:
+  profiles: development
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yashpal-singh/ige-config-repo
+server:
+  port: 8888
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+---
+
+spring:
+  profiles: cloud
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        git:
+          uri: https://github.com/yashpal-singh/ige-config-repo
+server:
+  port: 8888
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
