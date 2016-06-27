@@ -22,7 +22,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eurekaserver/eureka
 
 ---
 
@@ -48,4 +48,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://eurekaserver-infogain.rhcloud.com/eureka/
+      defaultZone: http://eurekaserver-infogain.rhcloud.com/eurekaserver/eureka
