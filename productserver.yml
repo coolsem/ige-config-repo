@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active: development
+
+---
+
+spring:
+  profiles: development
+server:
+  port: 9005
+  data:
+    mongodb:
+      uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+ribbon:
+  eureka:
+    enabled: false
+
+---
+
+spring:
+  profiles: cloud
+server:
+  port: 9005
+  data:
+    mongodb:
+      uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaserver-infogain.rhcloud.com/eureka/
+  instance:
+    hostname: product-infogain.rhcloud.com
+    nonSecurePort: 80
+ribbon:
+  eureka:
+    enabled: true
