@@ -11,6 +11,15 @@ server:
   data:
     mongodb:
       uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eurekaserver/eureka/
+  instance:
+    preferIpAddress: true
+ribbon:
+  eureka:
+    enabled: false
 
 ---
 
@@ -21,3 +30,13 @@ server:
   data:
     mongodb:
       uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaserver-infogain.rhcloud.com/eurekaserver/eureka/
+  instance:
+    hostname: apigateway-infogain.rhcloud.com
+    nonSecurePort: 80
+ribbon:
+  eureka:
+    enabled: true
