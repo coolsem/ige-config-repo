@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: development
+
+---
+
+spring:
+  profiles: development
+server:
+  port: 9000
+  data:
+    mongodb:
+      uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
+
+---
+
+spring:
+  profiles: cloud
+server:
+  port: 9000
+  data:
+    mongodb:
+      uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
