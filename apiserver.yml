@@ -19,11 +19,6 @@ endpoints:
   health:
     sensitive: false
 eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:8761/eurekaserver/eureka/
   instance:
     preferIpAddress: true
 ribbon:
@@ -47,9 +42,6 @@ endpoints:
   health:
     sensitive: false
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eurekaserver-infogain.rhcloud.com/eurekaserver/eureka/
   instance:
     hostname: apigateway-infogain.rhcloud.com
     nonSecurePort: 80

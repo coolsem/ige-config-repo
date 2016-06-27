@@ -19,9 +19,6 @@ endpoints:
   health:
     sensitive: false
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eurekaserver/eureka/
   instance:
     preferIpAddress: true
 ribbon:
@@ -45,9 +42,6 @@ endpoints:
   health:
     sensitive: false
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eurekaserver-infogain.rhcloud.com/eurekaserver/eureka/
   instance:
     hostname: product-infogain.rhcloud.com
     nonSecurePort: 80
