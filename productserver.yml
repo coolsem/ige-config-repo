@@ -11,6 +11,13 @@ server:
   data:
     mongodb:
       uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
 eureka:
   client:
     serviceUrl:
@@ -30,6 +37,13 @@ server:
   data:
     mongodb:
       uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
 eureka:
   client:
     serviceUrl:

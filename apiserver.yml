@@ -11,8 +11,17 @@ server:
   data:
     mongodb:
       uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eurekaserver/eureka/
   instance:
@@ -30,6 +39,13 @@ server:
   data:
     mongodb:
       uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri}
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
 eureka:
   client:
     serviceUrl:
