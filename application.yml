@@ -6,7 +6,7 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.eurekaserver.credentials.uri:http://127.0.0.1:8761}/eurekaserver/eureka/
+      defaultZone: ${vcap.services.eurekaserver.credentials.uri:http://127.0.0.1:8761}/eureka/
 ribbon:
   eureka:
     enabled: true
