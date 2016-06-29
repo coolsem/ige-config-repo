@@ -5,8 +5,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${vcap.services.eurekaserver.credentials.uri:http://127.0.0.1:8680}/eurekaserver
-    registerWithEureka: true
-    fetchRegistry: true
 ribbon:
   eureka:
     enabled: true
