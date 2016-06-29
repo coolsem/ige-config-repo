@@ -1,9 +1,7 @@
 configserver: true
 bus: true
 
-eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 10
+eureka:    
   client:
     serviceUrl:
       defaultZone: ${vcap.services.eurekaserver.credentials.uri:http://127.0.0.1:8761}/eurekaserver/eureka/
