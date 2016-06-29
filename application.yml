@@ -4,7 +4,7 @@ bus: true
 eureka:    
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.eurekaserver.credentials.uri:http://127.0.0.1:8761}/eurekaserver/eureka/
+      defaultZone: ${vcap.services.eurekaserver.credentials.uri:http://127.0.0.1:8680}/eurekaserver/eureka/
 ribbon:
   eureka:
     enabled: true
