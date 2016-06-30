@@ -1,6 +1,5 @@
 configserver: true
 bus: true
-
 eureka:    
   client:
     serviceUrl:
@@ -10,12 +9,3 @@ eureka:
 ribbon:
   eureka:
     enabled: true
-
----
-
-spring:
-  profiles: cloud
-eureka:
-  instance:
-    hostname: ${vcap.application.uris[0]}
-    nonSecurePort: 80
